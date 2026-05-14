@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【美妝大風吹】是誰在定義美？ - M11408029</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        beauty: {
+                            50: '#fff7f7',
+                            100: '#ffefef',
+                            200: '#ffdada',
+                            300: '#ffb8b8',
+                            400: '#ff8989',
+                            500: '#f85d5d',
+                            600: '#e63d3d',
+                            700: '#c12e2e',
+                            800: '#a02929',
+                            900: '#852828',
+                        },
+                        maillard: {
+                            light: '#D7B49E',
+                            base: '#916848',
+                            dark: '#4F3422',
+                        },
+                        glass: 'rgba(255, 255, 255, 0.7)',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #faf8f6;
+            color: #2d2d2d;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #e63d3d 0%, #916848 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-number {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 4rem;
+            line-height: 1;
+            opacity: 0.1;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            z-index: 0;
+        }
+        .content-block {
+            position: relative;
+            z-index: 1;
+        }
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            transition: all 0.3s ease;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        ::selection {
+            background: #ffb8b8;
+            color: #4F3422;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar/Header -->
+    <header class="sticky-header bg-white/60 backdrop-blur-md border-b border-gray-100 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <span class="w-8 h-8 bg-beauty-500 rounded-full flex items-center justify-center text-white font-bold">M</span>
+            <span class="font-bold tracking-tight text-xl">M11408029</span>
+        </div>
+        <nav class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest text-gray-500">
+            <a href="#" class="hover:text-beauty-600 transition-colors">Trends</a>
+            <a href="#" class="hover:text-beauty-600 transition-colors">History</a>
+            <a href="#" class="hover:text-beauty-600 transition-colors">Sustainability</a>
+        </nav>
+        <button class="bg-black text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-beauty-600 transition-all active:scale-95">
+            Subscribe
+        </button>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[90vh] flex flex-col items-center justify-center px-4 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute top-20 left-10 w-64 h-64 bg-beauty-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"></div>
+                <div class="absolute bottom-20 right-10 w-96 h-96 bg-maillard-light rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style="animation-delay: 2s"></div>
+            </div>
+
+            <div class="container mx-auto max-w-5xl z-10 text-center animate-fade-in-up">
+                <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-beauty-700 bg-beauty-100 rounded-full uppercase">Trend Analysis 2024</span>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight tracking-tighter">
+                    💄 <span class="gradient-text">美妝大風吹</span><br>
+                    是誰在定義美？
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+                    拆解那些讓你刷到停不下來的「話題美妝」，從多巴胺到美拉德，一場關於權力、算法與自我的審美革命。
+                </p>
+                
+                <!-- Banner Image -->
+                <div class="relative w-full aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl group">
+                    <img src='https://opal.google/board/blobs/c85e8fa8-fd66-4c29-9435-bfce430169c8' alt='Beauty Trend Banner' class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white text-left">
+                        <p class="text-sm font-medium opacity-80">Author: M11408029</p>
+                        <p class="text-xs opacity-60">Visualized in 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Introduction -->
+        <section class="py-24 px-4">
+            <div class="container mx-auto max-w-3xl">
+                <p class="text-2xl md:text-3xl font-medium leading-relaxed italic text-gray-800">
+                    「不知道你有沒有過這種經驗：打開手機，發現社群媒體上每隔一段時間就會出現一批新的『專有名詞』。」
+                </p>
+                <div class="mt-12 space-y-6 text-lg text-gray-600 leading-loose">
+                    <p>前陣子大家還在討論怎麼穿出「多巴胺」的快樂感，轉眼間，整個螢幕又被富有秋意、沉穩大地色的「美拉德」色彩給攻佔了。</p>
+                    <p>這種在社交媒體（如 TikTok、小紅書、IG）中引發爆炸性討論、甚至形成病毒式傳播的現象，我們稱之為「話題美妝」。它不只是一次性的產品熱賣，更像是一場集體參與的行為藝術。身為一個對社會趨勢有著觀察強迫症的知識份子，我忍不住想帶著大家一起拆解：這股美妝大風吹，到底是誰在背後吹動？</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid: Key Trends -->
+        <section class="py-20 bg-gray-50/50">
+            <div class="container mx-auto max-w-6xl px-4">
+                <div class="relative mb-16 text-center md:text-left">
+                    <span class="section-number">01</span>
+                    <h2 class="content-block text-4xl font-black">什麼是話題美妝？</h2>
+                    <p class="text-gray-500 mt-2">別說你還沒聽過「美拉德」！</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <!-- Clean Girl Card -->
+                    <div class="md:col-span-8 group bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 flex flex-col justify-between overflow-hidden relative">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-beauty-50 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+                        <div class="relative">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center gap-3 text-beauty-700">
+                                <span class="w-10 h-1 rounded-full bg-beauty-300"></span>
+                                Clean Girl 潔淨感美妝
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed mb-6">這追求的是一種「偽素顏」的最高境界。它強調原生肌膚的健康光澤，彷彿你剛睡醒、喝完一杯現榨果汁、做完冥想後那種自然散發的高級感。</p>
+                        </div>
+                        <div class="relative flex gap-2 overflow-x-auto pb-2 no-scrollbar">
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-semibold text-gray-500">#原生肌</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-semibold text-gray-500">#偽素顏</span>
+                            <span class="px-3 py-1 bg-gray-100 rounded-full text-xs font-semibold text-gray-500">#高光</span>
+                        </div>
+                    </div>
+
+                    <!-- Dopamine Card -->
+                    <div class="md:col-span-4 bg-beauty-500 p-8 rounded-[2rem] text-white flex flex-col justify-center items-center text-center group hover:bg-beauty-600 transition-all duration-300">
+                        <h3 class="text-2xl font-bold mb-4">多巴胺與美拉德</h3>
+                        <p class="opacity-90 font-light text-sm leading-relaxed">
+                            這兩者將色彩心理學玩到了極致。多巴胺是用高飽和度的色彩來「畫」出心情；而美拉德則是把烹飪中的褐變反應轉化為臉上的層次感。
+                        </p>
+                    </div>
+
+                    <!-- Face Structure Card -->
+                    <div class="md:col-span-4 bg-gray-900 p-8 rounded-[2rem] text-gray-300 flex flex-col justify-between hover:scale-[1.02] transition-transform">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-4">面部折疊度</h3>
+                            <p class="text-sm opacity-80 leading-relaxed">這不談顏色，談的是「光影結構」。透過高光與陰影的精準佈局，讓平板的五官在視覺上變得深邃，簡直是不用動刀的神奇魔法。</p>
+                        </div>
+                        <div class="mt-6 flex items-end justify-between">
+                            <span class="text-3xl font-bold text-beauty-400">#3D</span>
+                            <svg class="w-8 h-8 text-beauty-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                    </div>
+
+                    <!-- Skintellectuals Card -->
+                    <div class="md:col-span-8 bg-maillard-light/20 p-8 rounded-[2rem] border border-maillard-light/30 flex flex-col md:flex-row gap-8 items-center">
+                        <div class="flex-1">
+                            <h3 class="text-maillard-dark text-2xl font-bold mb-4">公式化護膚</h3>
+                            <p class="text-maillard-dark/80 text-sm leading-relaxed mb-4">消費者不再是盲從的跟風者，而是一群拿著成分表研究玻色因、視黃醇與神經醯胺的「成分黨」。</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-white/50 border border-maillard-light px-3 py-1 rounded-lg text-xs font-bold text-maillard-dark">早C晚A</span>
+                                <span class="bg-white/50 border border-maillard-light px-3 py-1 rounded-lg text-xs font-bold text-maillard-dark">Skin Cycling</span>
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-32 h-32 bg-maillard-base rounded-full opacity-20 border-[10px] border-maillard-dark"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline / Evolution Section -->
+        <section class="py-24 px-4 bg-white overflow-hidden">
+            <div class="container mx-auto max-w-5xl">
+                <div class="relative mb-20 text-center">
+                    <span class="section-number">02</span>
+                    <h2 class="content-block text-4xl font-black">時光機：權力結構的位移</h2>
+                </div>
+
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 -translate-x-1/2 hidden md:block"></div>
+
+                    <!-- Timeline Items -->
+                    <div class="space-y-24">
+                        <div class="relative flex flex-col md:flex-row items-center gap-12 group">
+                            <div class="md:w-1/2 md:text-right">
+                                <span class="text-beauty-500 font-bold tracking-widest uppercase">Pre-90s</span>
+                                <h3 class="text-2xl font-black mt-2 mb-4">老派浪漫時期</h3>
+                                <p class="text-gray-500 leading-relaxed">美感標準由時尚雜誌、好萊塢影星與龍頭化妝品品牌單向定義。我們在百貨專櫃前恭敬地聽著櫃姐推薦「本季流行」。</p>
+                            </div>
+                            <div class="w-12 h-12 bg-white border-4 border-beauty-200 rounded-full z-10 hidden md:flex items-center justify-center shrink-0">
+                                <div class="w-3 h-3 bg-beauty-500 rounded-full group-hover:scale-150 transition-transform"></div>
+                            </div>
+                            <div class="md:w-1/2"></div>
+                        </div>
+
+                        <div class="relative flex flex-col md:flex-row-reverse items-center gap-12 group">
+                            <div class="md:w-1/2 md:text-left">
+                                <span class="text-maillard-base font-bold tracking-widest uppercase">2010s</span>
+                                <h3 class="text-2xl font-black mt-2 mb-4">YouTube 時代</h3>
+                                <p class="text-gray-500 leading-relaxed">權力開始下放到素人博主手中。這些鄰家女孩在螢幕前手把手地解說微小的修容技巧，讓神祕的專業術語變得平民化。</p>
+                            </div>
+                            <div class="w-12 h-12 bg-white border-4 border-maillard-light rounded-full z-10 hidden md:flex items-center justify-center shrink-0">
+                                <div class="w-3 h-3 bg-maillard-base rounded-full group-hover:scale-150 transition-transform"></div>
+                            </div>
+                            <div class="md:w-1/2"></div>
+                        </div>
+
+                        <div class="relative flex flex-col md:flex-row items-center gap-12 group">
+                            <div class="md:w-1/2 md:text-right">
+                                <span class="text-gray-900 font-bold tracking-widest uppercase">Present Day</span>
+                                <h3 class="text-2xl font-black mt-2 mb-4">算法時代</h3>
+                                <p class="text-gray-500 leading-relaxed">決定你臉上畫什麼的是 15 秒短影音或 #GRWM 標籤。傳播速度以「天」計算，生命週期也變得像現代人的注意力一樣短暫。</p>
+                            </div>
+                            <div class="w-12 h-12 bg-white border-4 border-gray-900 rounded-full z-10 hidden md:flex items-center justify-center shrink-0">
+                                <div class="w-3 h-3 bg-gray-900 rounded-full group-hover:scale-150 transition-transform"></div>
+                            </div>
+                            <div class="md:w-1/2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Trends Feature -->
+        <section class="py-24 px-4 bg-neutral-900 text-white rounded-[4rem] mx-2 md:mx-6 mb-24 overflow-hidden relative">
+            <div class="absolute top-0 right-0 p-20 opacity-10">
+                <svg class="w-96 h-96" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+            </div>
+            
+            <div class="container mx-auto max-w-5xl relative z-10">
+                <div class="flex flex-col items-center mb-16">
+                    <span class="text-beauty-400 font-bold tracking-tighter text-6xl mb-4">03</span>
+                    <h2 class="text-4xl font-black text-center uppercase tracking-widest">現在流行什麼？</h2>
+                    <div class="w-24 h-1 bg-beauty-500 mt-6"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="space-y-6">
+                        <div class="text-5xl opacity-50 font-black italic">01.</div>
+                        <h4 class="text-2xl font-bold">原生感萬歲</h4>
+                        <p class="text-gray-400 leading-relaxed">減少厚重的粉感，保留一點自然的瑕疵，追求的是一種健康、充滿水分的光澤感。</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="text-5xl opacity-50 font-black italic">02.</div>
+                        <h4 class="text-2xl font-bold">美妝去性別化</h4>
+                        <p class="text-gray-400 leading-relaxed">彩妝不再是女性的專利，男性護膚與彩妝市場崛起，顯示了美妝正回歸到「自我整理」的本質。</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="text-5xl opacity-50 font-black italic">03.</div>
+                        <h4 class="text-2xl font-bold">人人都是成分專家</h4>
+                        <p class="text-gray-400 leading-relaxed">當代的消費者是「Skintellectuals」。廣告詞再美，都沒有實驗數據來得動人。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Controversies & Reality Check -->
+        <section class="py-24 px-4">
+            <div class="container mx-auto max-w-4xl">
+                <div class="flex items-center gap-4 mb-12">
+                    <div class="w-12 h-12 bg-black flex items-center justify-center text-white text-2xl">⚠️</div>
+                    <h2 class="text-3xl font-black">美妝圈的「真心話」爭議</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="glass-card p-8 rounded-2xl border-l-4 border-beauty-500">
+                        <h4 class="font-bold text-xl mb-3">微趨勢的陷阱</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">當流行更迭得太快，那些「此生必買」的名單中，有多少最後變成了化妝台角落過期的垃圾？</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-2xl border-l-4 border-blue-400">
+                        <h4 class="font-bold text-xl mb-3">濾鏡下的容貌焦慮</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">強效濾鏡創造了零毛孔效果，讓許多年輕人在面對真實鏡子時，產生了負面自我認知壓力。</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-2xl border-l-4 border-amber-500">
+                        <h4 class="font-bold text-xl mb-3">反推銷的崛起</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">消費者變得更聰明，比起聽你說什麼好用，我們更想聽你說：「這東西超雷，千萬別買！」</p>
+                    </div>
+                    <div class="glass-card p-8 rounded-2xl border-l-4 border-green-500">
+                        <h4 class="font-bold text-xl mb-3">「偽綠色」誠信問題</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">許多品牌看準環保趨勢，換個綠色包裝就宣稱天然。這種「漂綠」現象正受到嚴厲檢視。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Forecast -->
+        <section class="py-24 px-4 bg-beauty-50 relative">
+            <div class="container mx-auto max-w-5xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-black tracking-tight">未來美妝報</h2>
+                    <p class="text-beauty-600 font-bold uppercase tracking-widest mt-2">Future Forecast</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-10 rounded-[3rem] shadow-sm border border-beauty-100 hover:-translate-y-2 transition-transform">
+                        <div class="w-16 h-16 bg-beauty-100 rounded-2xl flex items-center justify-center text-beauty-600 mb-8 text-3xl">🤖</div>
+                        <h3 class="text-xl font-bold mb-4">AI 櫃姐</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">未來的 AI 將能根據你的即時膚質分析，在手機上為你進行「精準訂製」的客製化調配。</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-[3rem] shadow-sm border border-beauty-100 hover:-translate-y-2 transition-transform">
+                        <div class="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center text-green-600 mb-8 text-3xl">🌿</div>
+                        <h3 class="text-xl font-bold mb-4">永續美妝</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">減塑與補充式設計將成為基本門檻。生物合成技術開發出的「純素成分」將更溫柔對待地球。</p>
+                    </div>
+                    <div class="bg-white p-10 rounded-[3rem] shadow-sm border border-beauty-100 hover:-translate-y-2 transition-transform">
+                        <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mb-8 text-3xl">🧠</div>
+                        <h3 class="text-xl font-bold mb-4">情緒美妝</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">利用氣味與質地作用於神經系統，讓保養過程本身就是一種情緒紓壓，從護膚延伸到「護心」。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="py-32 px-4 relative overflow-hidden">
+            <div class="container mx-auto max-w-3xl text-center relative z-10">
+                <div class="w-16 h-px bg-gray-300 mx-auto mb-12"></div>
+                <p class="text-2xl md:text-3xl font-bold text-gray-800 leading-relaxed mb-8">
+                    美妝其實是一場關於「自我認知」的探索。
+                </p>
+                <div class="text-lg text-gray-500 space-y-6 leading-loose mb-12">
+                    <p>無論是極簡的 Clean Girl，還是繽紛的多巴胺妝容，最核心的議題始終是：你是否在這些趨勢中，找到了一種讓自己感覺舒服的方式？</p>
+                    <p>下次當你被某個「話題美妝」洗腦時，不妨暫停一下，以一個觀察者的視角看看這場風潮。然後，挑選那個真正能讓你感到愉悅的小動作，這才是定義美的最高權利。</p>
+                </div>
+                
+                <div class="mt-20 p-8 border-2 border-dashed border-gray-200 rounded-3xl inline-block">
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Article by</p>
+                    <p class="text-xl font-black tracking-tighter">學號：M11408029</p>
+                </div>
+            </div>
+            
+            <!-- Background Decorative Elements -->
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent -z-10"></div>
+        </section>
+    </main>
+
+    <script>
+        // Simple scroll interaction for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.sticky-header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'bg-white/90', 'shadow-md');
+                header.classList.remove('py-4', 'bg-white/60');
+            } else {
+                header.classList.add('py-4', 'bg-white/60');
+                header.classList.remove('py-2', 'bg-white/90', 'shadow-md');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(div => {
+            div.style.opacity = '0';
+            observer.observe(div);
+        });
+    </script>
+</body>
+</html>
